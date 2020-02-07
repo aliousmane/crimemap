@@ -13,10 +13,10 @@ class DBHelper:
     def get_all_inputs(self):
         connection = self.connect()
         try:
-        query = "SELECT description FROM crimes;"
-        with connection.cursor() as cursor:
-            cursor.execute(query)
-        return cursor.fetchall()
+            query = "SELECT description FROM crimes;"
+            with connection.cursor() as cursor:
+                cursor.execute(query)
+            return cursor.fetchall()
         finally:
         connection.close()
 
