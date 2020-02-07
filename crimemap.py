@@ -6,7 +6,7 @@ from flask import request
 if dbconfig.test:
     from mockdbhelper import MockDBHelper as DBHelper
 else:
-    from dbhelper import DBhelper
+    from dbhelper import DBHelper
 
 app = Flask(__name__)
 DB = DBHelper()
